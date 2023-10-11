@@ -1,0 +1,558 @@
+// 公共 scss 样式文件
+@import './common.scss';
+// @import '../fonts/index.css'; // 全局引入字体
+@import '//at.alicdn.com/t/font_3246181_uzd7b9ebw4.css';
+
+@font-face {
+  font-family: 'zi-hun';
+  src: url('../fonts/字魂59号-创粗黑.ttf');
+}
+
+@font-face {
+  font-family: 'DINPro-Medium';
+  src: url('../fonts/DINPro-Medium.otf');
+}
+
+@font-face {
+  font-family: 'DINPro-Regular';
+  src: url('../fonts/DINPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Medium';
+  src: url('../fonts/SourceHanSansCN-Medium.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Regular';
+  src: url('../fonts/SourceHanSansCN-Regular.otf');
+}
+
+.font-family-zi-hun {
+  font-family: 'zi-hun';
+}
+
+.font-family-dm {
+  font-family: 'DINPro-Medium';
+}
+
+.font-family-dr {
+  font-family: 'DINPro-Regular';
+}
+
+.font-family-sm {
+  font-family: 'SourceHanSansCN-Medium';
+}
+
+.font-family-sr {
+  font-family: 'SourceHanSansCN-Regular';
+}
+
+@mixin mapPopupBackgroundColor {
+  background: rgba(3, 28, 62, 0.9);
+}
+@mixin overflowText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+  overflow-x: hidden;
+}
+
+.verticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin ellipsis($line: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+.customScroll {
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background-color: rgba(12, 49, 124, 0.65);
+  }
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border-radius: 10px;
+  }
+}
+
+// 缺省图样式
+// 1x1
+.small-no-data {
+  background-image: url('../../../public/images/small_no_data.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+// 1x2,1x3
+.medium-no-data {
+  background-image: url('../../../public/images/medium_no_data.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sanfang {
+  .small-no-data {
+    background-image: url('../../../public/images/sanfang_small_no_data.png');
+  }
+  // 1x2,1x3
+  .medium-no-data {
+    background-image: url('../../../public/images/sanfang_medium_no_data.png');
+  }
+}
+
+//地图事件点位信息弹窗样式
+.map-popup-event {
+  border-radius: 4px;
+  overflow: hidden;
+  color: #fff;
+  background: rgba(0, 13, 38, 0.8);
+  padding-bottom: 15px;
+  z-index: 99;
+  .title {
+    height: 48px;
+    line-height: 48px;
+    background-color: rgba(0, 13, 38, 0.65);
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  .wrap {
+    padding: 6px 15px;
+    max-height: 300px;
+    overflow-y: scroll;
+    @extend .customScroll;
+
+    .item {
+      display: flex;
+      width: 300px;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 6px;
+      &:first-child {
+        margin-top: 0;
+      }
+      .label {
+        width: 100px;
+      }
+      .value {
+        width: 200px;
+      }
+    }
+  }
+  .btn {
+    width: 128px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    background: rgba(217, 0, 27);
+    margin: 10px auto 0;
+  }
+}
+
+// 三防地图点位信息弹窗样式
+.map-popup-sanfangEvent {
+  width: 376px;
+  height: 144px;
+  background: rgba(5, 28, 63, 0.9);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99;
+  .close {
+    font-size: 18px;
+    color: #fff;
+    background: rgba(5, 28, 63, 0.9);
+    height: 36px;
+    line-height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: -18px;
+    top: -18px;
+  }
+  .left {
+    border: 1px solid $primary-color;
+    width: 112px;
+    height: 112px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+    .iconfont {
+      font-size: 36px;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      .iconfont {
+        opacity: 1;
+      }
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .right {
+    color: #fff;
+    width: 216px;
+    .desc {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      @include ellipsis(4);
+    }
+    .btn {
+      float: right;
+      color: $primary-color;
+      font-size: 16px;
+      background: url(../images/arrow.png) no-repeat right center;
+      background-size: 18px;
+      padding-right: 16px;
+    }
+  }
+}
+
+// 基础点位弹窗
+.map-popup-default {
+  background: rgba(3, 28, 62, 0.9);
+  width: 130px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 8px;
+  color: $primary-color;
+  position: relative;
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+  }
+}
+
+// 事件影响范围圈标题（弹窗模拟实现）样式
+.map-popup-event-influence-circle-label {
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px #fff;
+  .name {
+    display: flex;
+    align-items: center;
+  }
+  .iconfont {
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+    margin-right: 6px;
+  }
+  span {
+    font-size: 16px;
+    height: 20px;
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'zi-hun';
+    font-weight: bold;
+  }
+  em {
+    width: 1px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.32);
+    margin: 0 8px;
+  }
+}
+
+// 危化事件影响范围圈label
+.map-popup-event-influence-circle-label {
+  background: rgba(3, 28, 62, 0.9);
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 8px;
+  color: $primary-color;
+  position: relative;
+}
+
+// .el-popper {
+//   // --el-color-white: #051c3f;
+//   --el-border-color-light: #051c3f;
+//   --el-border-color-lighter: #051c3f;
+//   --el-fill-color-light: rgba(255, 255, 255, 0.1);
+//   --el-text-color-regular: rgba(255, 255, 255, 0.9);
+//   --el-border-color-light: rgba(255, 255, 255, 0.15);
+//   --el-select-input-focus-border-color: rgba(255, 255, 255, 0);
+//   --el-select-input-focus-border-color: #051c3f;
+//   &.is-light {
+//     --el-color-white: #051c3f;
+//   }
+// }
+
+// TODO:
+// .el-picker__popper {
+//   .el-picker__popper.el-popper[role='tooltip'] {
+//     border: none;
+//   }
+
+//   .el-time-spinner__item.active:not(.disabled),
+//   .el-time-panel__btn {
+//     color: #fff;
+//   }
+
+//   .el-time-panel {
+//     background-color: rgba(15, 37, 71, 1);
+//     border: 1px solid var(--el-datepicker-inner-border-color);
+//   }
+
+//   .el-button,
+//   .el-input__inner,
+//   .el-picker-panel,
+//   .el-picker-panel__footer {
+//     background-color: rgba(255, 255, 255, 0.04);
+//   }
+// }
+
+// 自定义 tab 样式
+.rdapp-tab {
+  // width: 288px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  .tab-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 91px;
+    height: 40px;
+    margin: 4px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      background: $primary-color;
+    }
+    &:first-child {
+      margin-left: 4px;
+    }
+    &:last-child {
+      margin-right: 4px;
+    }
+    &.active {
+      background: $primary-color;
+    }
+  }
+}
+
+$--rdapp-button-h: 26px !default;
+
+@mixin rdapp-btn {
+  box-sizing: border-box;
+  height: $--rdapp-button-h;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transition: 0.1s all ease-in-out;
+}
+
+.rdapp-btn-normal {
+  @include rdapp-btn;
+  background: $primary-color;
+  color: #fff;
+  &:hover {
+    background: $primary-hover-color;
+  }
+  &:active {
+    background: $primary-active-color;
+  }
+}
+
+.rdapp-btn-normal-plain {
+  @include rdapp-btn;
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  // opacity: 1;
+  &:hover {
+    background: $primary-hover-color;
+    color: #fff;
+  }
+  &:active {
+    background: $primary-active-color;
+    color: #fff;
+  }
+}
+
+.rdapp-btn-primary-plain {
+  @include rdapp-btn;
+  background: $primary-bg-color;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  // opacity: 1;
+  &:hover {
+    background: $primary-hover-color;
+    color: #fff;
+  }
+  &:active {
+    background: $primary-active-color;
+    color: #fff;
+  }
+}
+
+.rdapp-btn-warn-plain {
+  @include rdapp-btn;
+  background: $--warn-bg-color;
+  border: 1px solid $--warn-color;
+  color: $--warn-color;
+  // opacity: 1;
+  &:hover {
+    background: $--warn-hover-color;
+    color: #fff;
+  }
+  &:active {
+    background: $--warn-active-color;
+    color: #fff;
+  }
+}
+
+.rdapp-btn-success {
+  @include rdapp-btn;
+  background: $--success-color;
+  color: #fff;
+  &:hover {
+    background: $--success-hover-color;
+  }
+  &:active {
+    background: $--success-active-color;
+  }
+}
+
+.rdapp-btn-success-plain {
+  @include rdapp-btn;
+  background: $--success-bg-color;
+  border: 1px solid $--success-color;
+  color: $--success-color;
+  // opacity: 1;
+  &:hover {
+    background: $--success-hover-color;
+    color: #fff;
+  }
+  &:active {
+    background: $--success-active-color;
+    color: #fff;
+  }
+}
+
+.rdapp-no-data {
+  &:before {
+    content: attr(data-content);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.24);
+    text-align: center;
+  }
+}
+
+.rdapp-message-box {
+  // background-color: #020b26;
+  // border-color: #051c3f;
+  .el-message-box__title {
+    color: #fff;
+  }
+  .el-message-box__message {
+    font-size: 18px;
+    color: #fff;
+  }
+  .el-button {
+    font-size: 16px;
+  }
+}
+
+.singleText {
+  @include overflowText;
+}
+
+// 解决 scrollbar 滚动条与页面元素重叠问题
+.offset-scrollbar {
+  width: calc(100% + 10px);
+  padding-right: 10px;
+}
+
+@mixin updateTimeCommon {
+  color: #fff;
+  font-size: 16px;
+  font-family: Source Han Sans CN-Regular;
+}
+
+@mixin updateTimeHightLight {
+  color: #f7a121;
+}

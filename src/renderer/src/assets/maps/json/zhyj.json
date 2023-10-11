@@ -1,0 +1,416 @@
+[{
+		"flag": "false",
+		"icon": "./static/img/icon_aqsc@2x.png",
+		"title": "安全生产",
+		"data": [{
+				"title": "重大危险源企业",
+				"mapId": ["GD_SZ_YWSJ:st_dangerousentp"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "危险化学品生产经营单位",
+				"mapId": ["GD_SZ_YWSJ:st_dangerouschemicalentp"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "加油站",
+				"mapId": ["GD_SZ_YWSJ:st_gassation"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "规上企业",
+				"mapId": []
+			},
+			{
+				"title": "粉尘涉爆企业",
+				"mapId": []
+			},
+			{
+				"title": "锂电池企业",
+				"mapId": []
+			},
+			{
+				"title": "易制毒企业",
+				"mapId": []
+			},
+			{
+				"title": "设备监管",
+				"mapId": ["GD_SZ_YWSJ:st_tzsbdjxx107019"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "有限空间",
+				"mapId": []
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_sanfang@2x.png",
+		"title": "三防",
+		"data": [{
+				"title": "河流线图层",
+				"mapId": []
+			},
+			{
+				"title": "水库面图层",
+				"mapId": []
+			},
+			{
+				"title": "重点防御设施",
+				"mapId": ["GD_SZ_YWSJ:key_defense_facilities"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "重点防护对象",
+				"mapId": ["GD_SZ_YWSJ:key_protection_object"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "水库监测点",
+				"mapId": []
+			},
+			{
+				"title": "海堤",
+				"mapId": []
+
+			},
+			{
+				"title": "易涝监测点",
+				"mapId": []
+			},
+			{
+				"title": "水闸",
+				"mapId": []
+			},
+			{
+				"title": "排水泵站",
+				"mapId": []
+			},
+			{
+				"title": "河道监测点",
+				"mapId": []
+			},
+			{
+				"title": "抢险队伍",
+				"mapId": ["GD_SZ_YWSJ:sf_rctminf", "GD_SZ_YWSJ:rescue_team"],
+				"mapType": "POINT",
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "三防仓库",
+				"mapId": ["GD_SZ_YWSJ:three_prevention_warehouse"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "三防重点防御设施风险点",
+				"mapId": ["GD_SZ_YWSJ:key_defense_facilities"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "三防重点防护对象",
+				"mapId": ["GD_SZ_YWSJ:sf_zdfyfxd"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "应急避难场所",
+				"mapId": ["GD_SZ_YWSJ:emergency_shelter", "GD_SZ_YWSJ:sf_ernyctrinf"],
+				"parent": "GD_SZ_YWSJ"
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_cssmx@2x.png",
+		"title": "城市生命线",
+		"data": [{
+				"title": "高压管线",
+				"mapId": []
+			},
+			{
+				"title": "次高压管线",
+				"mapId": []
+			},
+			{
+				"title": "中压管线",
+				"mapId": []
+			},
+			{
+				"title": "给水管段",
+				"mapId": []
+			},
+			{
+				"title": "排水管",
+				"mapId": ["GD_SZ_YWSJ:排水管cgs84_3857"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "排水渠",
+				"mapId": ["GD_SZ_YWSJ:排水渠cgs84_3857"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "地铁线路",
+				"mapId": ["GD_SZ_YWSJ:车辆段", "GD_SZ_YWSJ:地铁线路"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "地铁站点",
+				"mapId": ["GD_SZ_YWSJ:地铁站点"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "车辆段",
+				"mapId": []
+			},
+			{
+				"title": "通信塔",
+				"mapId": ["GD_SZ_YWSJ:通信塔"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "电视塔",
+				"mapId": ["GD_SZ_YWSJ:电视台"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "220KV输电站",
+				"mapId": []
+			},
+			{
+				"title": "220KV输电线",
+				"mapId": []
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_dzzh@2x.png",
+		"title": "地质灾害",
+		"data": [{
+				"title": "地址灾害易发程度分区图",
+				"mapId": ["GD_SZ_YWSJ:地质灾害防治规划分区new", "GD_SZ_YWSJ:断层L", "GD_SZ_YWSJ:岩溶灾害地质图"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "2019年地址灾害重点防治区划图",
+				"mapId": ["GD_SZ_YWSJ:T2019年地质灾害重点防治区"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "2018年地质灾害重点防治区划图",
+				"mapId": ["GD_SZ_YWSJ:T2018年地质灾害重点防治区"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "2017年地质灾害重点防治区划图",
+				"mapId": ["GD_SZ_YWSJ:T2017年地质灾害重点防治区shp"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "燃气管线地质灾害敏感点",
+				"mapId": ["GD_SZ_YWSJ:st_dzzhmgd"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "地质灾害隐患点",
+				"mapId": ["GD_SZ_YWSJ:地质灾害隐患点"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "数据概览迁移图",
+				"mapId": ["GD_SZ_YWSJ:sf_dzzhyhd_3857@空间地理_基础地图数据"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "地质灾害点",
+				"mapId": ["GD_SZ_YWSJ:地质灾害点"],
+				"parent": "GD_SZ_YWSJ"
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_fxpg@2x.png",
+		"title": "风险评估",
+		"data": [{
+			"title": "公共安全风险点",
+			"mapId": ["GD_SZ_YWSJ:st_urgent_risk"],
+			"parent": "GD_SZ_YWSJ"
+		}]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_dz@2x.png",
+		"title": "地震",
+		"data": [{
+				"title": "目标断裂分布图",
+				"mapId": ["GD_SZ_YWSJ:目标断裂分布图——早中更新世"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "狮子洋断裂带西支",
+				"mapId": ["GD_SZ_YWSJ:狮子洋断裂带西支——晚更新世"],
+				"parent": "GD_SZ_YWSJ"
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_qixiang@2x.png",
+		"title": "气象",
+		"data": [{
+				"title": "台风",
+				"mapId": []
+			}
+
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_jtys@2x.png",
+		"title": "交通运输",
+		"data": [{
+				"title": "危险货物运输企业",
+				"mapId": ["GD_SZ_YWSJ:st_wxhwysqy_st_wxhwysqy"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "集装箱运输企业",
+				"mapId": ["GD_SZ_YWSJ:st_jzxysqy"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "港口经营企业",
+				"mapId": ["GD_SZ_YWSJ:st_gkjyqy"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "道路运输企业",
+				"mapId": ["GD_SZ_YWSJ:st_dlysqy"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "长途客运场站",
+				"mapId": ["GD_SZ_YWSJ:st_ctkycz108678"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "外商投资运输企业",
+				"mapId": ["GD_SZ_YWSJ:st_wstzysyxkxx108411"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "普通货运企业",
+				"mapId": ["GD_SZ_YWSJ:st_pthyqy103533"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "货运出租企业",
+				"mapId": []
+			},
+			{
+				"title": "驾驶员培训企业",
+				"mapId": ["GD_SZ_YWSJ:st_jsypxqy108593"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "大型货运市场",
+				"mapId": []
+			},
+			{
+				"title": "车辆报警热力图",
+				"mapId": []
+			},
+			{
+				"title": "危化车辆一周流量",
+				"mapId": ["test0318:use_for_traj_latest_points_insz"],
+				"mapType": "POINT",
+				"img" : "./static/icon/危险货物运输企业.png",
+				"parent": "test0319"
+			},
+			{
+				"title": "危化车辆定位",
+				"mapId": ["GD_SZ_YWSJ:mask-30", "GD_SZ_YWSJ:mask-300"],
+				"parent": "GD_SZ_YWSJ"
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_scjd@2x.png",
+		"title": "市场监管",
+		"data": [{
+			"title": "市场监管企业",
+			"mapId": ["GD_SZ_YWSJ:st_qyjbxx100927"],
+			"parent": "GD_SZ_YWSJ"
+		}]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_mz@2x.png",
+		"title": "民政",
+		"data": [{
+				"title": "敬老院",
+				"mapId": ["GD_SZ_YWSJ:sz_jly"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "救助站",
+				"mapId": ["GD_SZ_YWSJ:st_jzz"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "未成年人社会保护",
+				"mapId": ["GD_SZ_YWSJ:st_wcnrshbhsd"],
+				"parent": "GD_SZ_YWSJ"
+			}
+		]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_jiaoyu@2x.png",
+		"title": "教育",
+		"data": [{
+			"title": "学校",
+			"mapId": ["GD_SZ_YWSJ:st_school"],
+			"parent": "GD_SZ_YWSJ"
+		}]
+	},
+	{
+		"flag": "false",
+		"icon": "./static/img/icon_yjzy@2x.png",
+		"title": "应急资源",
+		"data": [{
+				"title": "应急机构",
+				"mapId": ["GD_SZ_YWSJ:st_emggovpost"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "卫生应急机构",
+				"mapId": ["GD_SZ_YWSJ:st_hospital"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "应急队伍",
+				"mapId": ["GD_SZ_YWSJ:st_resfurnish"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "应急仓库",
+				"mapId": ["GD_SZ_YWSJ:st_reswarehouse"],
+				"parent": "GD_SZ_YWSJ"
+			},
+			{
+				"title": "应急专家",
+				"mapId": []
+			}
+		]
+	}
+]

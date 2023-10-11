@@ -1,0 +1,27 @@
+{
+  "common": {
+    "bodyColor": "#FFFFFF"
+  },
+   "Menu": {
+     "itemColorActive": "#2f54caFF",
+     "itemColorActiveHover": "#2f54caFF",
+     "itemColorActiveCollapsed": "#2f54caFF",
+     "itemColor": "#2c3350FF",
+     "itemTextColor": "#ffffffFF",
+     "color": "#0000",
+     "itemColorHover": "#2F54CAFF",
+     "groupTextColor": "rgb(118, 124, 130)",
+     "itemTextColorHover": "#ffffffFF",
+     "itemTextColorActive": "#ffffffFF",
+     "itemTextColorActiveHover": "#ffffffFF",
+     "itemTextColorChildActive": "#ffffffFF",
+     "arrowColor": "#ffffffFF",
+     "arrowColorHover": "#ffffffFF",
+     "arrowColorActive": "#ffffffFF",
+     "arrowColorActiveHover": "#ffffffFF",
+     "arrowColorChildActive": "#ffffffFF"
+   },
+   "DynamicTags":{
+     "inputWidth":"174px"
+   }
+}
